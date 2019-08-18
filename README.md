@@ -228,15 +228,3 @@
     
     How to check whether page load completely or not ?
     while(!((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
