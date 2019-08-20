@@ -235,17 +235,18 @@
     driver.findElement(By.id("ID").getCssValue("color");
     dirver.findElement(By.id("ID").getCssValue("font-size");
     
+    How to load data from property file ?
+    Properties prop = new Properties();
+    FileInputStream fp = new FileInputStream("path.properties");
+    prop.load(fp)
+    driver.get(prop.getProperty("url"));
+
     
     How to hanlde https website errors in selenium?
-    
     FirefoxProfile fp = new FirefoxProfile()
     fp.setAcceptUntrustedCertificates(true);
     fp.setAssumeUntrustedCertificateIssuer(false);
     WebDriver driver = new FirefoxDriver(fp);
     driver.get("https://www.gmail.com");
 
-   How to load data from property file ?
-   Properties prop = new Properties();
-   FileInputStream fp = new FileInputStream("path.properties");
-   prop.load(fp)
-   driver.get(prop.getProperty("url"));
+  
