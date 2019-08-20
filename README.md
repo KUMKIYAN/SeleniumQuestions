@@ -48,9 +48,9 @@
     visibilityOfAllElements()
     visibilityOfAllElementsLocatedBy()
     visibilityOfElementLocated()
-
-    dirver.switchTo(id) <- id, name, frame element.
-
+    
+    how to work with Frames ?
+    dirver.switchTo.frame(id) <- id, name, index and frame element.
     driver.switchTo().defaultContent()
 
     How you handle 3rd child window
