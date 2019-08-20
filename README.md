@@ -100,6 +100,7 @@
 
     isMultiple() 		//return true if it allow multi selection element
     deselectAll()		//clear all the selected Elements. No Parameters needed
+    getOptions()        //to get selected options
 
     how to check Checkbox selected in the page
     driver.findElement(locator).isSelected()
@@ -160,6 +161,7 @@
     //double click
     Actions actions = new Actions(driver);
     WebElement elementLocator = driver.findElement(By.id("ID"));
+    actions.moveToElement(elementLocator)
     actions.doubleClick(elementLocator).perform();
 
     or
@@ -228,3 +230,7 @@
     
     How to check whether page load completely or not ?
     while(!((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
+
+    How to get color and size of text ?
+    driver.findElement(By.id("ID").getCssValue("color");
+    dirver.findElement(By.id("ID").getCssValue("font-size");
