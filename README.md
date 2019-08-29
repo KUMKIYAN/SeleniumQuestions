@@ -249,4 +249,32 @@
     WebDriver driver = new FirefoxDriver(fp);
     driver.get("https://www.gmail.com");
 
-  
+  RestAssuredFramework:
+
+  		<dependency>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+		
+	    <dependency>
+	       	<groupId>com.jayway.jsonpath</groupId>
+	        <artifactId>json-path</artifactId>
+	        <version>2.4.0</version>
+	   </dependency>
+
+
+
+RestAssured.baseURI ="http://restapi.demoqa.com/customer";
+RequestSpecification request = RestAssured.given();
+JSONObject requestParams = new JSONObject();
+request.header("Content-Type", "application/json");
+request.body(requestParams.toJSONString());
+Response response = request.post("/register");
+response.getStatusCode();
+
+
+JsonPath.read(response.getBody().asString(),jsonpathExtractor);
+String contentType = response.header("Content-Type");
+JsonPath jsonPathEvaluator = response.jsonPath();
+String city = jsonPathEvaluator.get("City");
